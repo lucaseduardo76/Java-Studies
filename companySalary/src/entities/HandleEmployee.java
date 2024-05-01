@@ -22,15 +22,17 @@ public class HandleEmployee {
 	
 	public static Employee newEmployee(Scanner sc){
 		
-		
+		System.out.println("");
 		System.out.printf("Digite o nome do funcionário: ");
-		String name = sc.next();
-		
+		String name = sc.nextLine();
+		name = sc.nextLine();
+					
 		System.out.printf("DIgite o salario atual do funcionário: ");
 		double salary = sc.nextDouble();
 		
 		System.out.printf("Digite o ID do funcionário: ");
 		int id = sc.nextInt();
+		System.out.println("");
 		
 		
 		return new Employee(name, salary, id);		
