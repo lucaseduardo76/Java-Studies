@@ -13,7 +13,7 @@ public class Main {
 		System.out.printf("Digite a quantidade de Colunas: ");
 		int column = sc.nextInt();
 		
-		int[][] mat = new int[row][column]; // matriz
+		int[][] mat = new int[row][column]; // vetor bidimensional
 		
 		for(int i = 0; i < mat.length; i++) {
 			for(int u = 0; u < mat[i].length; u++) {
