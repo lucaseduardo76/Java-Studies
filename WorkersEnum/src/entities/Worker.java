@@ -1,22 +1,24 @@
 package entities;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import entities.enums.WorkerLevel;
 
 public class Worker {
 
+	Integer id;
 	String name;
 	Double baseSalary;
 	WorkerLevel level;
 	Departament departament;
 	List<HoursContract> contracts = new ArrayList<>();
 
-	public Worker(String name, Double baseSalary, WorkerLevel level) {
+	public Worker(Integer id, String name, Double baseSalary, WorkerLevel level, Departament departament) {
+		this.id = id;
 		this.name = name;
 		this.baseSalary = baseSalary;
 		this.level = level;
+		this.departament = departament;
 	}
 
 	public String getName() {
@@ -52,14 +54,17 @@ public class Worker {
 	}
 
 	public double income(Integer year, Integer month) {
-
-		//for(HoursContract c : contracts) {
-			//if(c.getDate().getYear() == year && c.getDate().getMonth())
-		//}
 		
-		HoursContract c = (HoursContract) contracts.stream().filter(x -> x.getDate().getYear() == year && x.getDate().getMonthValue() == month).findFirst().orElse(null);
+		Double ret = 0.0;
 		
-		return 4.5;
+		for(HoursContract c : contracts) {
+			if(c.getDate().getYear() == year && c.getDate().getMonthValue() == month) {
+				ret +=  c.totalValue();
+			}
+		}
+		
+		
+		return ret;
 
 	}
 }
