@@ -21,6 +21,10 @@ public class Worker {
 		this.departament = departament;
 	}
 
+	public int getId() {
+		return this.id;
+	}
+	
 	public String getName() {
 		return name;
 	}

@@ -1,26 +1,54 @@
 package aplicattion;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-import entities.Departament;
 import entities.HandleOperations;
 import entities.Worker;
-import entities.enums.WorkerLevel;
 
 public class Main {
 
 	public static void main(String[] args) {		
 		Scanner sc = new Scanner(System.in);
+		List<Worker> workerList = new ArrayList<>();
 		
+		Worker worker = HandleOperations.createWorker(sc);
 		
+		workerList.add(worker);
 		
 		boolean cont = true;
-		
+		int choose;
 		while(cont) {
-			int choose;
+			System.out.println("Escolha uma das opções \n"
+				+ "1 - Adicionar novo trabalhador \n"
+				+ "2 - Conferir salario total de um colaborador: \n"
+				+ "3 - Encerrar programa");	
+			choose = sc.nextInt();
 			
-			System.out.println(Escolha uma das opções);
+			switch(choose) {
+				case 1:
+					Worker w = HandleOperations.createWorker(sc);
+					
+					workerList.add(w);
+					break;
+					
+				case 2:
+					HandleOperations.showSalary(workerList);
+					break;
+				case 3:
+					choose = 3;
+					break;
+				default:
+					System.out.println("Escolha inválida");
+					break;
+			}
+			
+				
+				
+			
 		}
+		
 		
 		
 		
