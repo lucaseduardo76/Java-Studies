@@ -3,9 +3,9 @@ package entities;
 import java.time.LocalDate;
 
 public class HoursContract {
-	LocalDate date;
-	Double valuePerHour;
-	Integer hours;
+	private LocalDate date;
+	public Double valuePerHour;
+	public Integer hours;
 	
 	public HoursContract(LocalDate date, Double valuePerHour, Integer hours) {
 		this.date = date;

@@ -13,10 +13,6 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		List<Worker> workerList = new ArrayList<>();
 		
-		Worker worker = HandleOperations.createWorker(sc);
-		
-		workerList.add(worker);
-		
 		boolean cont = true;
 		int choose;
 		while(cont) {
@@ -34,7 +30,7 @@ public class Main {
 					break;
 					
 				case 2:
-					HandleOperations.showSalary(workerList);
+					HandleOperations.showSalary(workerList, sc);
 					break;
 				case 3:
 					choose = 3;

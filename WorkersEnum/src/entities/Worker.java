@@ -57,9 +57,9 @@ public class Worker {
 		this.contracts.remove(c);
 	}
 
-	public double income(Integer year, Integer month) {
+	public double income(int month, int year) {
 		
-		Double ret = 0.0;
+		Double ret = this.baseSalary;
 		
 		for(HoursContract c : contracts) {
 			if(c.getDate().getYear() == year && c.getDate().getMonthValue() == month) {
