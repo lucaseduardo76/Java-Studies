@@ -34,9 +34,11 @@ public class Main {
 					break;
 				case 3:
 					choose = 3;
+					cont = false; 
 					break;
 				default:
 					System.out.println("Escolha inválida");
+					
 					break;
 			}
 			
