@@ -20,11 +20,12 @@ public class Main {
 		if(test) {
 			System.out.println("O numero é positivo");
 		}
-		}catch(DomainException e) {
+		}catch(DomainException e) { // Essa é a exceção criada pelo desenvolvedor
 			System.out.println("Erro: "+ e.getMessage());
-		}catch(InputMismatchException e) {
+		}catch(InputMismatchException e) { //Essa exceção é nativa do java para input incorretos
 			System.out.println("Digite oque ta sendo pedido poxa!!");
 		}
+		
 		sc.close();
 		
 		
