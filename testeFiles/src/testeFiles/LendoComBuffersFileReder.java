@@ -24,6 +24,17 @@ public class LendoComBuffersFileReder {
 			}
 		}catch(IOException e) {
 			System.out.println("Error: " + e.getMessage());
+		}finally {
+			try {
+				if(br != null) {
+					br.close();
+				}
+				if(fr != null) {
+					fr.close();
+				}
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
