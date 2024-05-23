@@ -28,13 +28,11 @@ public class Main {
 				product = br.readLine();
 			}
 						
-			try (BufferedWrier bw = new BufferedWriter(new FileWriter("c:\\Temp\\outSource.csv", true))) {
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter("c:\\Temp\\outSource.csv", true))) {
 				for(Products p : productList) {
 					bw.write(p.toString());
 					bw.newLine();
 				}
-			}catch(IOException e) {
-				System.out.println("DEu ruim");
 			}
 			
 			
