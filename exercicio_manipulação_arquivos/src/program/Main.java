@@ -13,7 +13,6 @@ import models.entities.Products;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		String path = "c:\\Temp\\source.csv";
 				
@@ -28,7 +27,7 @@ public class Main {
 				product = br.readLine();
 			}
 						
-			try (BufferedWriter bw = new BufferedWriter(new FileWriter("c:\\Temp\\outSource.csv", true))) {
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter("c:\\Temp\\outSourced.csv", true))) {
 				for(Products p : productList) {
 					bw.write(p.toString());
 					bw.newLine();
