@@ -2,7 +2,7 @@ package models.entities;
 
 public class Vehicle {
 
-	String model;
+	private String model;
 	
 	public Vehicle(String model) {
 		this.model = model;

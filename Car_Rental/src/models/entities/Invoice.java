@@ -2,8 +2,8 @@ package models.entities;
 
 public class Invoice {
 	
-	Double basicPayment;
-	Double tax;
+	private Double basicPayment;
+	private Double tax;
 	
 	public Invoice(Double basicPayment, Double tax) {
 		this.basicPayment = basicPayment;
