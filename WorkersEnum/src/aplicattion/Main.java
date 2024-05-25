@@ -16,7 +16,7 @@ public class Main {
 		boolean cont = true;
 		int choose;
 		while(cont) {
-			System.out.println("Escolha uma das opções \n"
+			System.out.println("Escolha uma das opções abaixo \n"
 				+ "1 - Adicionar novo trabalhador \n"
 				+ "2 - Conferir salario total de um colaborador: \n"
 				+ "3 - Encerrar programa");	
