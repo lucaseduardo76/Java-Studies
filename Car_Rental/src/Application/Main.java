@@ -29,7 +29,7 @@ public class Main {
 			System.out.print("Retorno (dd/MM/yyyy HH:mm): ");
 			LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
 			
-			System.out.print("Entre com o preço por hora: ");
+			System.out.print("Entre com o preço por hora : ");
 			Double valueHour = sc.nextDouble();
 			
 			System.out.print("Entre com o valor por dia: ");
