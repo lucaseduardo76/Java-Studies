@@ -6,6 +6,9 @@ public class Departament {
 	private Integer id;
 	private String name;
 	
+	public Departament() {
+	}
+	
 	public Departament(Integer id, String name) {
 		this.id = id;
 		this.name = name;

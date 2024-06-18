@@ -1,37 +1,21 @@
 package application;
 
+import java.util.List;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
-import db.DB;
+import model.dao.impl.DaoFactory;
+import model.dao.inter.DepartamentDao;
+import model.entities.Departament;
 
 public class Program 	{
 	public static void main(String[] args) {
+		DepartamentDao departamentDao = DaoFactory.createDepartamentDao();
 		
-		Connection conn = null;
-		PreparedStatement st = null;
+		departamentDao.delete(12);
 		
-		try {
-			conn = DB.getConnection();
-			st = conn.prepareStatement(
-					"UPDATE seller "
-					+"SET BaseSalary = BaseSalary * ? "
-					+"WHERE "
-					+"(DepartmentId != ?)");
-			
-			st.setDouble(1, 1.25);
-			st.setInt(2, 4);
-			
-			int rowsAffected = st.executeUpdate();
-			
-			System.out.println("Done, Rows Affected: " + rowsAffected);
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}finally {
-			DB.closeStatement(st);
-			DB.closeConnection();
+		List<Departament> listDep = departamentDao.findAll();
+		
+		for(Departament item:listDep) {
+			System.out.println(item);
 		}
 		
 	}
