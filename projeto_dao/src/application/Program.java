@@ -16,7 +16,7 @@ public class Program 	{
 		
 		LocalDate time = LocalDate.now();
 		
-		Seller sell = new Seller(0, "Larah Raquel", "lesds@gmail.com", time, 1948.48, departamentDao.findById(6));
+		Seller sell = new Seller(0, "Larah Raquel", "lesds@gmail.com", time, 1948, departamentDao.findById(6));
 		
 		sellerDao.insert(sell);
 		
