@@ -16,7 +16,7 @@ public class Main {
 		
 		Scanner sc = null;
 		
-		try {
+		try 
 			sc = new Scanner(System.in);
 		
 			System.out.println("Entre com os dados do aluguel");
